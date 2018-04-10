@@ -31,3 +31,5 @@ echo "Restarting service..."
 sudo systemctl restart nginx
 
 echo "Script finished!"
+
+python ./give_ip.py
