@@ -8,7 +8,7 @@ echo "Create resource group: $groupname"
 echo "Using location $location"
 az group create --name $groupname --location $location
 echo "Creating VM ($vm_name)..."
-az vm create --name $vm_name --size Standard_A1 --resource-group $groupname --image debian --generate-ssh-keys
+az vm create --name $vm_name --size Standard_A1 --resource-group $groupname --image UbuntuLTS --generate-ssh-keys --custom-data az-ubuntu-cloud-init.txt
 echo "Opening port 80..."
 az vm open-port --port 80 --resource-group $groupname --name $vm_name
 echo "Get public IP and VM Status..."

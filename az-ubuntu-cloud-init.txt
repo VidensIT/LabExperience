@@ -1,0 +1,9 @@
+#cloud-config
+package_upgrade: true
+packages:
+    - nginx
+    - git
+runcmd:
+    - git clone https://github.com/tjongerius/LabExperience.git
+    - cd LabExperience
+    - bash ./create.sh
