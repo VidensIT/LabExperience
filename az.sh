@@ -15,8 +15,10 @@ echo "Get public IP and VM Status..."
 az vm get-instance-view --name $vm_name --resource-group $groupname
 az vm list-ip-addresses --resource-group $groupname --name $vm_name --output table
 
+echo "Wait for 1 minute before page becomes reachable, CloudInit is setting up the host..."
 read -n 1 -p "Wait for user to stop, press any key…" any
 echo "Stopping VM..."
 az vm stop --resource-group $groupname --name $vm_name
 echo "Deleting ResourceGroup... (This may take some time...)"
 az group delete --name $groupname
+echo "Finished script!"
