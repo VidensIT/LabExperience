@@ -28,6 +28,8 @@ sudo chmod 704 /var/www/html/*
 
 sudo rm /var/www/html/index.nginx-debian.html
 
+sudo chmod -R 777 /var/www/html/
+
 echo "Restarting service..."
 
 sudo systemctl restart nginx
