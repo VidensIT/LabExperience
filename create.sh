@@ -21,6 +21,8 @@ echo "Moving data to web folder..."
 
 sudo mv index.html /var/www/html/
 sudo cp *_filedownload /var/www/html/
+sudo cp -R assets /var/www/html/
+sudo cp -R images /var/www/html/
 
 sudo chmod 704 /var/www/html/*
 
@@ -34,6 +36,7 @@ echo "Setting up FTP service..."
 
 sudo cp ./vsftpd.conf /etc/
 sudo iptables -A INPUT -p tcp --dport 10090:10100 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT
 
 echo "Creating files..."
 

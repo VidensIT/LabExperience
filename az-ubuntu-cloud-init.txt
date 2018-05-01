@@ -2,6 +2,7 @@
 package_upgrade: true
 packages:
     - nginx
+    - vsftpd
     - git
 runcmd:
     - git clone https://github.com/tjongerius/LabExperience.git
