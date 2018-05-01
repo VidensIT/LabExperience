@@ -20,7 +20,7 @@ python ./generate_page.py
 echo "Moving data to web folder..."
 
 sudo mv index.html /var/www/html/
-sudo mv *_filedownload /var/www/html/
+sudo cp *_filedownload /var/www/html/
 
 sudo chmod 704 /var/www/html/*
 
@@ -29,6 +29,21 @@ sudo rm /var/www/html/index.nginx-debian.html
 echo "Restarting service..."
 
 sudo systemctl restart nginx
+
+echo "Setting up FTP service..."
+
+sudo cp ./vsftpd.conf /etc/
+sudo iptables -A INPUT -p tcp --dport 10090:10100 -j ACCEPT
+
+echo "Creating files..."
+
+sudo mkdir -p /srv/files/ftp
+sudo usermod -d /srv/files/ftp ftp
+sudo cp *_filedownload /srv/files/ftp/
+
+echo "Restarting service..."
+
+sudo systemctl restart vsftpd.service
 
 echo "Script finished!"
 
