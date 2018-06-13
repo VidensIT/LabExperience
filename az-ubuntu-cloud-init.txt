@@ -4,6 +4,7 @@ packages:
     - nginx
     - vsftpd
     - git
+    - fping
 runcmd:
     - git clone https://github.com/tjongerius/LabExperience.git
     - cd LabExperience

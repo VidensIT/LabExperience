@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachineSize": {
+            "value": "Standard_DS3_v2"
+        },
+        "adminUsername": {
+            "value": "vcadmin"
+        },
+        "virtualNetworkName": {
+            "value": "tj_VELO_vVCE_AZURE"
+        },
+        "networkInterfaceName": {
+            "value": "tjvvce01899"
+        },
+        "networkSecurityGroupName": {
+            "value": "tj_VELO_vVCE_SG"
+        },
+        "adminPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQtwq9Df/mu6wPQy2fLJU+p6naWlAgA4hNSqFfnIDA8PjNxvGBcyBMoESyfxGqQb0f6LWXSVU31qzJeBJtwCngNWQGXshYpuPk9Vg+pMuhWDl3mkMs6p9sZYuAXY5nVOShL+FHXYdC+pgQJSCZKbrlrHYjf3PK9PFGFdUzyS6z5VQEPqUO7dHCeaHOvBuDRzGpk+BPr08iw6uUqZF4OfmAjDSLnPuBgz6rvMaWZuObQOBc/zoDI2NLEiFpuxnaNo36wlAaumuaMmJSfS4KW8h5W7739YCalrUZ6PftdaEmZsFCzElkesDO496G1mOKSLcrn27R/jHWr9M5By91XaMz"
+        },
+        "subnetName": {
+            "value": "tj_VELO_vVCE_SN_Public_JH"
+        }
+    }
+}

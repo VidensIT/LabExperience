@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-group=5
+group=3
 groupname=tj_VELO_vVCE_RG_CEVA_GROUP$group
 securitygroup=tj_VELO_vVCE_SG
 vnetname=tj_VELO_vVCE_AZURE
@@ -10,7 +10,7 @@ privatert=tj_VELO_vVCE_RT_PRIVATE
 vm_name=tjvVCE0$group
 vmjh_name=tjJHVCE$group
 vmlh_name=tjLHVCE$group
-location=uksouth
+location=eastus2
 address='10.'$group'.0.0/16'
 wansubnet='10.'$group'.0.'
 lansubnet='10.'$group'.1.'
