@@ -16,6 +16,7 @@ az vm open-port --port 21 --resource-group $groupname --name $vm_name --priority
 az vm open-port --port 20 --resource-group $groupname --name $vm_name --priority 902
 az vm open-port --port 10090-10100 --resource-group $groupname --name $vm_name --priority 903
 echo "Opening VLC port 8082 and 1234..."
+az vm open-port --port 8080 --resource-group $groupname --name $vm_name --priority 906
 az vm open-port --port 8082 --resource-group $groupname --name $vm_name --priority 905
 az vm open-port --port 1234 --resource-group $groupname --name $vm_name --priority 904
 

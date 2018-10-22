@@ -39,6 +39,8 @@ sudo iptables -A INPUT -p tcp --dport 8082 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 8082 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 1234 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 1234 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 8080 -j ACCEPT
 
 echo "Setting up FTP service..."
 
