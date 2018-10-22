@@ -41,6 +41,7 @@ sudo iptables -A INPUT -p tcp --dport 1230:1240 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 1230:1240 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 8080 -j ACCEPT
+sed -i 's/geteuid/getppid/' /usr/bin/vlc
 
 echo "Setting up FTP service..."
 
