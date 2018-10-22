@@ -37,8 +37,8 @@ sudo systemctl restart nginx
 echo "Setting up VLC service..."
 sudo iptables -A INPUT -p tcp --dport 8082 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 8082 -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 1234 -j ACCEPT
-sudo iptables -A INPUT -p udp --dport 1234 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 1230:1240 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 1230:1240 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 8080 -j ACCEPT
 
@@ -57,6 +57,9 @@ sudo cp *_filedownload /srv/files/ftp/
 echo "Restarting service..."
 
 sudo systemctl restart vsftpd.service
+
+echo "Starting video stream..."
+nohup cvlc -vvv ./base_stream.mp4 --loop --rtsp-host 10.0.0.4:1234 --sout '#rtp{sdp=rtsp://10.0.0.4:8082/video.sdp}' &
 
 echo "Script finished!"
 
