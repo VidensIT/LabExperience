@@ -5,6 +5,7 @@ packages:
     - vsftpd
     - git
     - fping
+    - vls
 runcmd:
     - git clone https://github.com/tjongerius/LabExperience.git
     - cd LabExperience
