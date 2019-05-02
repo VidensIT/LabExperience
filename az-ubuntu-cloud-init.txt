@@ -7,6 +7,6 @@ packages:
     - fping
     - vlc
 runcmd:
-    - git clone https://github.com/tjongerius/LabExperience.git
+    - git clone https://github.com/VidensIT/LabExperience.git
     - cd LabExperience
     - bash ./create.sh
